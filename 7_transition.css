@@ -147,16 +147,6 @@ a[href*="google.com"]{
   position: relative;
 }
 
-a[href*="google.com"]::after{
-  content: "";
-  position: absolute;
-  right: 4px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 16px;
-  height: 16px;
-  background: url("arrow.png") no-repeat;
-  background-size: contain;
-}
+
 
 
