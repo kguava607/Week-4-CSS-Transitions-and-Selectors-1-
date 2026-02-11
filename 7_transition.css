@@ -1,0 +1,161 @@
+
+#menuItems{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  background: lightblue;
+  text-align: center;
+}
+
+#jumpMenu{
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  display: none;
+  background: darkslateblue;
+}
+
+/* Show it when hovering the Recent Articles button OR the menu itself */
+#recentArticles:hover + #jumpMenu,
+#jumpMenu:hover{
+  display: block;
+}
+
+
+
+#menuItems button{
+  width: 100%;
+  background: lightblue;
+  color: white;
+  border: none;
+  padding: 18px 0;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+#menuItems button:hover{
+  background: plum;
+  color: white;
+}
+
+/* Jump menu links hover */
+#jumpMenu a{
+  display: block;
+  padding: 4px 0;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+#jumpMenu a:hover{
+  background: slateblue;
+  color: white;
+}
+
+
+main{
+  margin-left: 200px;
+  padding-top: 150px;   /* space for fixed header */
+}
+
+header{
+    font-size: 32px;;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 200px;
+    right: 0;
+    background: plum;
+    
+    }
+
+
+header button{
+    background: plum;
+    border: none;
+    padding: 10px 25px;
+    font-size: 24px;
+}
+
+
+article p:first-of-type::first-letter{
+  font-family: "Times New Roman", Times, serif;
+  font-size: 36px;
+}
+
+a[href*="google.com"]{
+  padding-right: 22px;
+  position: relative;
+}
+
+a[href*="google.com"]::after{
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background: url("arrow.png") no-repeat;
+  background-size: contain;
+}
+
+
+
+
+#thanks{
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  color: white;
+  background: rgb(255, 185, 202);
+  padding: 18px 22px;
+  font-size: 28px;
+}
+
+/* 5) Articles: neat + reorganize on resize */
+#container {  
+  display: flex;
+  flex-wrap:wrap;
+  flex-direction: row;
+}
+
+#container article{
+  width: 300px;
+
+  /* start "light" */
+  color: #b0afae;
+
+  /* collapsed view */
+  max-height: 240px;
+  overflow: hidden;
+
+  /* 2 second animation */
+  transition: color 2s, max-height 2s;
+}
+
+#container article:hover{
+  color: black;        /* darker */
+  max-height: 1200px; /* expanded */
+}
+
+a[href*="google.com"]{
+  display: inline-block;
+  padding-right: 24px;
+  position: relative;
+}
+
+a[href*="google.com"]::after{
+  content: "";
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background: url("arrowarrow.png") no-repeat;
+  background-size: contain;
+}
+
