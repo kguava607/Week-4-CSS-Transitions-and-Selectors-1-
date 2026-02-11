@@ -155,7 +155,8 @@ a[href*="google.com"]::after{
   transform: translateY(-50%);
   width: 16px;
   height: 16px;
-  background: url("arrowarrow.png") no-repeat;
+  background: url("arrow.png") no-repeat;
   background-size: contain;
 }
+
 
